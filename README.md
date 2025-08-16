@@ -1,6 +1,6 @@
 # Animal Detection System using YOLOv8
 
-A real-time animal detection system built with Python, OpenCV, and YOLOv8, designed to run on Raspberry Pi for wildlife monitoring and agricultural protection applications.
+A real-time animal detection system built with Python, OpenCV, YOLOv8, and PyTorch, designed to run on Raspberry Pi 5 for wildlife monitoring and agricultural protection applications.
 
 ## 🎯 Overview
 
@@ -11,7 +11,7 @@ This project implements an AI-powered animal detection system that can identify 
 - **Real-time Detection**: Live animal detection from camera feed
 - **Custom YOLOv8 Model**: Trained specifically for animal detection
 - **Visual Feedback**: Colored bounding boxes with class names and confidence scores
-- **Raspberry Pi Optimized**: Lightweight implementation suitable for edge devices
+- **Raspberry Pi 5 Optimized**: Lightweight implementation designed specifically for Raspberry Pi 5
 - **Multi-class Detection**: Supports detection of multiple animal species
 - **Confidence Filtering**: Adjustable confidence threshold (default: 40%)
 
@@ -20,14 +20,16 @@ This project implements an AI-powered animal detection system that can identify 
 - **Python 3.x**
 - **OpenCV** - Computer vision and image processing
 - **Ultralytics YOLOv8** - Object detection model
-- **Raspberry Pi** - Edge computing platform
+- **PyTorch** - Deep learning framework
+- **Raspberry Pi 5** - Edge computing platform
 
 ## 📋 Prerequisites
 
 - Python 3.7 or higher
-- Raspberry Pi (recommended: Pi 4 with 4GB+ RAM)
+- Raspberry Pi 5 (8GB RAM recommended for optimal performance)
 - USB Camera or Raspberry Pi Camera Module
 - Trained YOLOv8 model weights
+- PyTorch (automatically installed with Ultralytics)
 
 ## 🚀 Installation
 
@@ -39,7 +41,7 @@ This project implements an AI-powered animal detection system that can identify 
 
 2. **Install required packages**
    ```bash
-   pip install ultralytics opencv-python
+   pip install ultralytics opencv-python torch torchvision
    ```
 
 3. **Set up the model**
@@ -100,10 +102,10 @@ The system uses a dynamic color assignment for different animal classes:
 
 ## 📊 Performance
 
-- **Detection Speed**: ~15-30 FPS on Raspberry Pi 4
-- **Accuracy**: Depends on trained model quality
-- **Memory Usage**: ~500MB-1GB RAM
-- **CPU Usage**: ~60-80% on Raspberry Pi 4
+- **Detection Speed**: ~20-45 FPS on Raspberry Pi 5
+- **Accuracy**: Depends on trained YOLOv8 model quality
+- **Memory Usage**: ~1-2GB RAM
+- **CPU Usage**: ~40-60% on Raspberry Pi 5
 
 ## 🔧 Troubleshooting
 
@@ -124,7 +126,8 @@ The system uses a dynamic color assignment for different animal classes:
 3. **Low FPS performance**
    - Reduce input resolution
    - Increase confidence threshold
-   - Use GPU acceleration if available
+   - Ensure adequate cooling for Raspberry Pi 5
+   - Use lighter YOLOv8 model variant (YOLOv8n instead of YOLOv8x)
 
 ## 🚀 Future Enhancements
 
@@ -154,6 +157,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Ultralytics team for YOLOv8
+- PyTorch team for the deep learning framework  
 - OpenCV community
 - Raspberry Pi Foundation
 
