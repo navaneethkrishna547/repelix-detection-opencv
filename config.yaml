@@ -1,0 +1,13 @@
+model:
+  path: "weights/best.pt"
+  confidence_threshold: 0.4
+  
+camera:
+  source: 0
+  resolution: [640, 480]
+  fps: 30
+
+detection:
+  classes: ["deer", "wild_boar", "elephant", "monkey"]
+  save_results: true
+  output_dir: "results/"
